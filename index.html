@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Influencers and Influenced – Même contenu, autre genre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf7ff;--ink:#1a1330;--mute:#5b5275;--alexa:#c4136b;--alex:#6234d1;--line:#ddd5ee;--card:#fff;--warn:#fff3d6;--warnink:#6b4a00;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0b16;--ink:#f3eefb;--mute:#b3a9c9;--alexa:#ff4fa3;--alex:#a07bff;--line:#2b2540;--card:#17132a;--warn:#2e2410;--warnink:#f2cf7a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d0b16;--ink:#f3eefb;--mute:#b3a9c9;--alexa:#ff4fa3;--alex:#a07bff;--line:#2b2540;--card:#17132a;--warn:#2e2410;--warnink:#f2cf7a;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 "Source Serif 4",Georgia,serif}
+h1,h2,h3,nav{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--alexa);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+nav{display:flex;flex-wrap:wrap;gap:6px 18px;padding:16px 0;font-size:15px;font-weight:500;border-bottom:1px solid var(--line)}
+nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--ink)}
+.hero{padding:56px 0 40px}
+.hero h1{font-size:clamp(40px,8vw,88px);line-height:1;margin:0 0 18px;font-weight:800;letter-spacing:-.02em}
+.hero p.lead{font-size:clamp(19px,2.4vw,24px);max-width:34em;color:var(--mute);margin:0 0 30px}
+.mirror{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.mirror div{padding:26px 22px;font-family:"Bricolage Grotesque",sans-serif}
+.mirror .a{background:color-mix(in srgb,var(--alexa) 14%,var(--bg));border-right:3px solid var(--bg)}
+.mirror .b{background:color-mix(in srgb,var(--alex) 14%,var(--bg))}
+.mirror b{display:block;font-size:clamp(26px,5vw,44px);line-height:1.1}
+.mirror .a b{color:var(--alexa)}.mirror .b b{color:var(--alex)}
+.mirror small{font-size:15px;color:var(--mute)}
+.who{margin-top:18px;font-size:15px;color:var(--mute)}
+section{padding:54px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(28px,4.4vw,42px);line-height:1.1;margin:0 0 20px;letter-spacing:-.01em}
+h3{font-size:21px;margin:30px 0 8px}
+p{max-width:40em;margin:0 0 16px}
+.q{font-size:clamp(22px,3vw,30px);line-height:1.35;font-style:italic;border-left:5px solid var(--alexa);padding-left:20px;max-width:30em;margin:22px 0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;counter-reset:s;padding:0;list-style:none;margin:22px 0}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:16px;line-height:1.3}
+.steps li::before{content:counter(s);display:block;font-size:13px;color:var(--mute);margin-bottom:4px}
+.steps li.v{border-color:var(--alexa);box-shadow:inset 0 0 0 1px var(--alexa)}
+.tw{overflow-x:auto;margin:18px 0}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:16px;line-height:1.5}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:"Bricolage Grotesque",sans-serif;font-size:15px}
+th.ta,.ta{color:var(--alexa)}th.tb,.tb{color:var(--alex)}
+td:first-child{font-weight:600;width:28%}
+.todo{display:inline-block;background:var(--warn);color:var(--warnink);border:1px dashed var(--warnink);border-radius:6px;padding:1px 8px;font:600 14px "Bricolage Grotesque",sans-serif}
+.tabs{display:flex;gap:8px;margin:18px 0}
+.tabs button{font:600 15px "Bricolage Grotesque",sans-serif;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 18px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.ex{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;padding:0;list-style:none}
+.ex li{background:var(--card);border:1px solid var(--line);border-left-width:6px;border-radius:10px;padding:14px 16px;font-size:16px;line-height:1.5}
+.ex li[data-w="both"]{border-left-color:var(--mute)}.ex li[data-w="a"]{border-left-color:var(--alexa)}.ex li[data-w="b"]{border-left-color:var(--alex)}
+.ex em{display:block;font:600 13px "Bricolage Grotesque",sans-serif;color:var(--mute);font-style:normal;margin-bottom:2px}
+.ex li[hidden]{display:none}
+.lim{padding:0;list-style:none;display:grid;gap:10px;max-width:40em}
+.lim li{padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.concl{font-size:clamp(24px,3.6vw,36px);line-height:1.25;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;max-width:24em;margin:0 0 20px}
+.key{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:22px 0}
+footer{padding:36px 0 60px;border-top:1px solid var(--line);font-size:15px;color:var(--mute)}
+@media(max-width:560px){body{font-size:17px}.mirror div{padding:18px 14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Navigation">
+<a href="#probleme">Problématique</a><a href="#site">Pourquoi un site</a><a href="#theorie">Cadre théorique</a><a href="#methode">Méthodologie</a><a href="#resultats">Résultats</a><a href="#limites">Limites</a><a href="#conclusion">Réponse</a><a href="#suite">Prolongements</a>
+</nav>
+
+<header class="hero">
+<h1>Même contenu, autre genre</h1>
+<p class="lead">Deux comptes Instagram identiques, un seul signal qui change : le genre affiché. Que nous montre l’algorithme ?</p>
+<div class="mirror" aria-label="Les deux comptes miroirs">
+<div class="a"><b>Alexa</b><small>@alexa.zjb79 · Paris, Law student</small></div>
+<div class="b"><b>Alex</b><small>@alex.zjb79 · Paris, law student</small></div>
+</div>
+<p class="who">Projet <em>Influencers and Influenced</em> · Culture numérique · Julia Todesca Duran &amp; Zara Faflei</p>
+</header>
+
+<section id="probleme">
+<h2>La question de départ</h2>
+<p>Sur Instagram, les contenus que l’on voit sont choisis par des algorithmes de recommandation, souvent présentés comme neutres. Or la recherche montre qu’ils peuvent reproduire des stéréotypes de genre, sans que personne l’ait voulu.</p>
+<p class="q">Dans quelle mesure l’identité de genre affichée par un(e) créateur(rice) de contenu influence-t-elle la visibilité d’un contenu, à contenu strictement identique ?</p>
+<p><strong>Hypothèse.</strong> Deux comptes qui affichent un genre différent pourraient recevoir des recommandations distinctes, même sans aucun historique d’interactions.</p>
+</section>
+
+<section id="site">
+<h2>Pourquoi un site web pour restituer l’exploration ?</h2>
+<p>Une exploration est une démarche : question, protocole, observations, limites. Un site permet de la parcourir dans l’ordre, de voir chaque étape et chaque capture au même endroit, et de laisser le protocole assez détaillé pour que quelqu’un d’autre puisse le refaire.</p>
+<p><span class="todo">à compléter</span> Ajoutez ici une phrase sur votre choix du site plutôt qu’un compte Instagram (par exemple : on étudie Instagram, donc on ne l’utilise pas aussi pour restituer).</p>
+</section>
+
+<section id="theorie">
+<h2>Deux lectures pour ouvrir la boîte noire</h2>
+<h3>L’algorithme comme système sociotechnique</h3>
+<p>Selon Singh et ses coauteurs (<em>Female Librarians and Male Computer Programmers?</em>), un algorithme ne dépend pas que du code : il dépend aussi des concepteurs, des données, des comportements des utilisateurs et des normes sociales. Le genre peut être repéré indirectement par des <strong>proxies</strong> (prénom, photo, biographie). Il faut distinguer association statistique et discrimination intentionnelle.</p>
+<h3>Rétroaction et biais de popularité</h3>
+<p>Lou et ses coauteurs (<em>Exploring Nexus of Social Media Algorithms, Content Creators, and Gender Bias</em>, 18 études) décrivent un cercle : les utilisateurs produisent des données, l’algorithme adapte ses recommandations, les créateurs ajustent leurs publications. Le biais de popularité favorise en plus les contenus déjà populaires.</p>
+</section>
+
+<section id="methode">
+<h2>Méthodologie</h2>
+<p>Un protocole minimal, contrôlé et reproductible : deux comptes vierges, observés au même moment, avec la même conduite et une seule différence déclarée.</p>
+<ol class="steps">
+<li>Créer deux comptes</li><li>Aligner les paramètres</li><li class="v">Faire varier le genre affiché</li><li>Observer les premiers fils</li><li>Coder et comparer</li>
+</ol>
+<div class="tw"><table>
+<tr><th>Élément</th><th>Ce que nous avons fait</th></tr>
+<tr><td>Variable indépendante</td><td>Le genre affiché, signalé par le prénom (Alexa / Alex) et la photo de profil. Pas de champ « genre » utilisé.</td></tr>
+<tr><td>Constantes</td><td>Compte neuf, 0 publication, 0 abonné, 0 abonnement (situation de <em>cold start</em>), biographie quasi identique (« Paris, law student »), actions aussi similaires que possible.</td></tr>
+<tr><td>Variable observée</td><td>Les contenus recommandés : fil d’accueil, Reels, Explore, suggestions de comptes.</td></tr>
+<tr><td>Temporalité</td><td>Observation des premiers écrans, au même moment pour les deux comptes. <span class="todo">à compléter : date(s), durée, nombre de sessions</span></td></tr>
+<tr><td>Aspects techniques</td><td><span class="todo">à compléter : appareils, application ou navigateur, réseau/localisation, langue, captures d’écran</span></td></tr>
+<tr><td>Comptes et messages à la création</td><td><span class="todo">à compléter : nombre de comptes, textes de bio, messages ou choix proposés par Instagram à l’inscription</span></td></tr>
+<tr><td>Nombre de contenus</td><td><span class="todo">à compléter : nombre de contenus relevés par compte et par espace</span></td></tr>
+<tr><td>Codage des contenus</td><td>Quatre catégories : style/apparence, sport/performance, divertissement viral, contenu commercial. Analyse qualitative, non statistique. <span class="todo">à compléter : règle pour décider si un contenu est « genré » ou non</span></td></tr>
+</table></div>
+</section>
+
+<section id="resultats">
+<h2>Résultats</h2>
+<h3>Le socle commun domine</h3>
+<p>Aux premiers écrans, Instagram sert d’abord ce qui performe déjà à grande échelle : du contenu viral, commercial et grand public, identique ou très proche sur les deux comptes. Le genre ne produit pas tout de suite deux environnements distincts.</p>
+<h3>Une couche différente apparaît</h3>
+<div class="tw"><table>
+<tr><th>Type de contenu</th><th class="ta">Alexa</th><th class="tb">Alex</th></tr>
+<tr><td>Style / apparence</td><td class="ta">plus présent</td><td class="tb">moins présent</td></tr>
+<tr><td>Sport / performance</td><td class="ta">moins présent</td><td class="tb">plus présent</td></tr>
+<tr><td>Divertissement viral</td><td class="ta">très présent</td><td class="tb">très présent</td></tr>
+<tr><td>Contenu commercial</td><td class="ta">présent</td><td class="tb">présent</td></tr>
+</table></div>
+<p>Exemples relevés (filtrez par compte) :</p>
+<div class="tabs" role="group" aria-label="Filtrer les exemples">
+<button aria-pressed="true" data-f="all">Tous</button><button aria-pressed="false" data-f="a">Alexa</button><button aria-pressed="false" data-f="b">Alex</button><button aria-pressed="false" data-f="both">Communs</button>
+</div>
+<ul class="ex" id="ex">
+<li data-w="both"><em>Les deux comptes</em>Concours Mercedes-AMG F1 avec Kimi Antonelli</li>
+<li data-w="both"><em>Les deux comptes</em>Contenus humoristiques, automobiles et sportifs</li>
+<li data-w="a"><em>Alexa</em>Révisions « lock in »</li>
+<li data-w="a"><em>Alexa</em>Citation sur le mois de novembre</li>
+<li data-w="a"><em>Alexa</em>Vidéo d’un couple au-dessus des nuages</li>
+<li data-w="b"><em>Alex</em>Suggestion du compte de Kylian Mbappé</li>
+<li data-w="b"><em>Alex</em>Saut à l’élastique</li>
+<li data-w="b"><em>Alex</em>Football amateur</li>
+<li data-w="b"><em>Alex</em>Vidéo humoristique d’un cowboy chez Walmart</li>
+</ul>
+<p>Ces observations sont qualitatives et donnent des indices, pas une preuve causale. Les intérêts relevés ne sont d’ailleurs pas exclusivement masculins ou féminins.</p>
+<h3>Quatre lectures prudentes</h3>
+<ul>
+<li>Un socle de popularité précède la personnalisation.</li>
+<li>Le genre peut être un signal parmi d’autres, sans preuve qu’il soit utilisé directement.</li>
+<li>La bio, l’image et le contexte peuvent servir de proxies. Par exemple, « Law student » peut expliquer les contenus de révisions chez Alexa.</li>
+<li>L’exposition initiale est instable et dépend des conditions d’observation.</li>
+</ul>
+</section>
+
+<section id="limites">
+<h2>Ce que l’on ne peut pas conclure</h2>
+<p>La réflexivité fait partie du protocole : voici ce qui empêche de généraliser.</p>
+<ul class="lim">
+<li><strong>Deux comptes seulement</strong> : aucune généralisation possible.</li>
+<li><strong>Une observation courte</strong> : on ne voit pas l’évolution des recommandations.</li>
+<li><strong>Des variables imparfaitement contrôlées</strong> : biographies, appareils, paramètres.</li>
+<li><strong>Plusieurs espaces Instagram</strong> (fil, Reels, Explore) qui fonctionnent selon des mécanismes différents.</li>
+<li><strong>Un fil dynamique</strong> : il dépend de la localisation, de l’actualité et des tendances, et ne se reproduit pas à l’identique.</li>
+<li><strong>Des catégories de genre simplifiées</strong> par le dispositif (deux comptes, féminin et masculin).</li>
+</ul>
+</section>
+
+<section id="conclusion">
+<h2>Notre réponse à la problématique</h2>
+<p class="concl">Le genre seul ne s’isole pas.</p>
+<div class="key">
+<p>Instagram sert d’abord des contenus viraux et commerciaux communs aux deux comptes. Ensuite, des différences apparaissent : davantage d’études et d’esthétique chez Alexa, davantage de sport chez Alex. Mais elles ne peuvent pas être attribuées au seul genre, car la biographie, la photo et le contexte peuvent aussi jouer.</p>
+<p><strong>Notre résultat principal est méthodologique : corrélation ne signifie pas causalité.</strong> Il faut contrôler les signaux annexes avant de conclure à un biais, ce que prédit une lecture sociotechnique. Les utilisateurs influencent les algorithmes, et les algorithmes influencent ce que les utilisateurs voient.</p>
+</div>
+</section>
+
+<section id="suite">
+<h2>Prolongements</h2>
+<p><strong>Observer 30 jours.</strong> Avec l’accumulation des interactions, la personnalisation pourrait diverger. C’est une hypothèse, non observée : seul un suivi réel permettrait de la vérifier.</p>
+<p><strong>Comparer avec d’autres réseaux</strong> (TikTok, Snapchat), comme le suggère notre enseignante, pour obtenir des données comparatives. <span class="todo">à compléter si vous le faites</span></p>
+<p><strong>Un profil non genré ?</strong> Question à tester : peut-on s’inscrire sans afficher de genre, et que recommande alors l’algorithme ? <span class="todo">à compléter : ce que vous avez constaté à l’inscription</span></p>
+<p>Une étude plus solide demanderait plus de comptes, des paramètres standardisés, des interactions contrôlées et une observation prolongée.</p>
+</section>
+
+<footer>
+<p>Bibliographie : Singh et al., <em>Female Librarians and Male Computer Programmers? Gender Bias in Occupational Images on Digital Media Platforms</em> ; Lou et al., <em>Exploring Nexus of Social Media Algorithms, Content Creators, and Gender Bias</em>. <span class="todo">à compléter : références complètes</span></p>
+<p>Julia Todesca Duran &amp; Zara Faflei · Culture numérique</p>
+</footer>
+</div>
+<script>
+(function(){
+var btns=document.querySelectorAll('.tabs button'),items=document.querySelectorAll('#ex li');
+btns.forEach(function(b){b.addEventListener('click',function(){
+var f=b.getAttribute('data-f');
+btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+items.forEach(function(li){li.hidden=!(f==='all'||li.getAttribute('data-w')===f)});
+})});
+})();
+</script>
+</body>
+</html>
